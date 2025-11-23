@@ -56,7 +56,7 @@ st.title('Seu Mentor IA 🧠')
 
 with st.form(key='formulario_estudos', clear_on_submit=True):
     # A caixa de texto fica indentada (dentro do form)
-    text_usuario = st.text_area('FEITO PELO IGOR!!! Estou aqui para agir como mentor nos seus estudos, resuma seu estudo:', placeholder='Digite o que estudei aqui...') 
+    text_usuario = st.text_area('FEITO PELO IGOR!!! Estou aqui para agir como mentor nos seus estudos, resuma seu estudo:', placeholder='Digite o que estudou aqui...') 
     
     # O botão DEVE ser st.form_submit_button
     botao_enviar = st.form_submit_button('Enviar')
@@ -108,3 +108,4 @@ for item in historico:
         st.divider()
 
         st.write(f'**Luiz:** {item[2]}')
+
