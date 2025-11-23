@@ -56,7 +56,7 @@ st.title('Seu Mentor IA 🧠')
 
 with st.form(key='formulario_estudos', clear_on_submit=True):
     # A caixa de texto fica indentada (dentro do form)
-    text_usuario = st.text_area('Estou aqui para agir como mentor nos seus estudos, resuma seu estudo:', placeholder='Digite o que estudei aqui...') 
+    text_usuario = st.text_area('FEITO PELO IGOR!!! Estou aqui para agir como mentor nos seus estudos, resuma seu estudo:', placeholder='Digite o que estudei aqui...') 
     
     # O botão DEVE ser st.form_submit_button
     botao_enviar = st.form_submit_button('Enviar')
@@ -73,7 +73,7 @@ if botao_enviar:
                     {
                         'role': 'system',
                         'content': '''
-                            Você é o Luiz, um mentor de estudos focado em alta performance.
+                            Você é o Igor, um mentor de estudos focado em alta performance.
                             Sua atitude é: Direto, exigente, mas motivador (Estilo "Tropa de Elite").
                             
                             REGRA DE OURO: Você DEVE responder seguindo essa referencia de formato abaixo:
@@ -95,7 +95,7 @@ if botao_enviar:
             salvar_dados(text_usuario, resposta)
 
         # Mostra a resposta fora do spinner
-        st.write('### Resposta do Mentor Luiz:')
+        st.write('### Resposta do Mentor Igor:')
         st.write(resposta)
 
 # --- Barra Lateral ---
@@ -106,4 +106,5 @@ for item in historico:
     with st.sidebar.expander(f'Data: {item[3]}'):
         st.write(f'**Você estudou:** {item[1]}')
         st.divider()
+
         st.write(f'**Luiz:** {item[2]}')
